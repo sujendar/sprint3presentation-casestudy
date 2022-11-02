@@ -1,0 +1,57 @@
+<h1 mat-dailog-title>Edit Book application form</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="bookForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Book Name</mat-label>
+      <input formControlName="title" matInput placeholder="title">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Book Logo</mat-label>
+      <input  formControlName="logo" matInput placeholder="logo">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Book Category</mat-label>
+      <mat-select formControlName="category" matInput placeholder="book Category">
+          <mat-option value="Fiction">Fiction</mat-option>
+          <mat-option value="Horror">Horror</mat-option>
+          <mat-option value="Comedy">Comedy</mat-option>
+          <mat-option value="Scifi">Sci-fi</mat-option>
+          <mat-option value="Thriller">Thriller</mat-option>
+          </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Published Date</mat-label>
+      <input formControlName="publisheddate" matInput [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>price</mat-label>
+  <input formControlName="price" matInput placeholder="price">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Publisher</mat-label>
+  <input formControlName="publisher" matInput placeholder="publisher">
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Status</mat-label>
+<mat-select formControlName="active" matInput placeholder="active">
+    <mat-option value=1>Active</mat-option>
+    <mat-option value=0>Non-Active</mat-option>
+    </mat-select>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Author</mat-label>
+  <input formControlName="author" matInput placeholder="author">
+</mat-form-field>
+ </form>
+ <div mat-dialog-action [align]="'end'">
+  <div class="example-button-row">
+  <button mat-raised-button color="warn" (click)="editBook()">Save</button>
+   <button style="margin-left:8px" mat-raised-button color="warn" mat-dialog-close>Exit</button>
+  </div>
+</div>
+    </div>
