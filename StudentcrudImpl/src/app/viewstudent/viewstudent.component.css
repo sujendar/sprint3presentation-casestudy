@@ -1,0 +1,13 @@
+.card-body {
+    padding:  20px ;
+          background-color: lightblue;
+          width: 50%;    
+      }
+      input[type=text], input[type=password],input[type=email] {
+        width: 100%;
+        margin: 8px 0;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 2px solid rgb(2, 54, 2);
+        box-sizing: border-box;
+    }

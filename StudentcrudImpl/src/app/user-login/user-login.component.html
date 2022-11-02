@@ -1,0 +1,12 @@
+<form (ngSubmit)="userLogin()">
+    <div class="container">
+        <h2>Login here</h2>
+        <label>Username : </label>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="user.userId" id="userId" name="userId" required>
+        <label>Password : </label>
+        <input type="password" placeholder="Enter Password"  [(ngModel)]="user.password" id="password" name="password" required>
+        <button type="submit">LOGIN</button>
+        <input type="checkbox" checked="checked"> Remember me
+        <a href="/register">SIGNUP</a>
+    </div>
+</form>

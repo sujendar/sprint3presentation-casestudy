@@ -1,0 +1,31 @@
+<div class="container">
+  <h2 class="text-center">Student List</h2>
+  
+  <table  class="table table-striped table-bordered">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Student ID</th>
+      <th scope="col">Student Name</th>
+      <th scope="col">City</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngIf="students.length ==0">
+      <td colspan="5" style="text-align: center"><h2>There are no students yet</h2></td>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td >{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.city}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="goToUpdateStudent(student.id)">Edit</button>&nbsp;
+        <button type="button" class="btn btn-secondary" (click)="goToViewStudent(student.id)"  style="margin-left: 10px">View</button>&nbsp;
+         <button type="button" class="btn btn-danger" (click)="deleteStudent(student.id)"  style="margin-left: 10px">Delete</button> 
+      </td>
+    </tr>
+  
+    </tbody>
+  </table>
+    <button type="button" class="btn btn-success" (click)="goToAddCourse()">Add</button>
+  </div>

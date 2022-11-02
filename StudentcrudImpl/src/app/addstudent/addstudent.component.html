@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        
+<div class="card-body">
+  <h3 class="text-center">Create New Student</h3>
+  <form #addstudentform="ngForm" (ngSubmit)="addStudentformsubmit()">
+    <div class="form-group">
+      <label for="id">Id:</label>
+      <input type="text" class="form-control" required [(ngModel)]="student.id" name="id">
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="name">Student Name:</label>
+      <input type="text" class="form-control" required [(ngModel)]="student.name" name="name">
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="text" class="form-control" required [(ngModel)]="student.city" name="city">
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" required [(ngModel)]="student.email" name="email">
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="mobileNumber">MobileNumber:</label>
+      <input type="text" class="form-control" required [(ngModel)]="student.mobileNumber" name="mobileNumber">
+    </div>
+    <br />
+    <div id="outer">
+      <div style="float: left; width: 130px"><button type="submit" class="btn btn-success"  >Submit</button></div>
+      <div style="float: right; width: 250px"><button type="submit" class="btn btn-secondary" (click)="gotolist()">Back</button></div>
+  </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
